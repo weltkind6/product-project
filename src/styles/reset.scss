@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+input, textarea, select, button {
+  appearance: none;
+  border-radius: 0;
+  outline: none;
+}

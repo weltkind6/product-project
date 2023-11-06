@@ -1,34 +1,28 @@
-import path  from "path";
 import webpack from "webpack"
-import HtmlWebpackPlugin from "html-webpack-plugin"
+import {buildWebpackConfig} from "./config/build/buildWebpackConfig";
+import {BuildEnv, BuildPaths} from "./config/build/types/config";
+import path from "path";
 
-const config: webpack.Configuration ={
-    mode: "development",
-    entry: path.resolve(__dirname, 'src', 'index.ts'),
-    module: {
-        rules: [
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/,
-            },
-        ],
-    },
-    output: {
-        filename: "[name].[contenthash].js",
-        path: path.resolve(__dirname, 'build'),
-        clean: true
-    },
-    resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
-    },
-    plugins: [
-        new HtmlWebpackPlugin({ template: path.resolve(__dirname, 'public', 'index.html') }),
-        new webpack.ProgressPlugin(),
-    ],
-}
+export default (env: BuildEnv) => {
+    const paths: BuildPaths = {
+        entry: path.resolve(__dirname, 'src', 'index.tsx'),
+        build: path.resolve(__dirname, 'build'),
+        html: path.resolve(__dirname, 'public', 'index.html')
+    }
 
-export default config;
+    const mode = env.mode || "development";
+    const PORT = env.port || 3000;
+    const isDev = mode === 'development';
+
+    const config: webpack.Configuration = buildWebpackConfig({
+        mode,
+        paths,
+        isDev,
+        port: PORT,
+    })
+
+    return config
+};
 
 
 // Код импортирует необходимые модули: path, HtmlWebpackPlugin и webpack.
@@ -38,7 +32,7 @@ export default config;
 //     Свойство mode установлено на "development", что указывает на то, что сборка предназначена для разработки.
 //
 //     Свойство entry указывает точку входа для сборки с помощью webpack.
-//     Оно определяет путь к файлу 'index.ts' в директории 'src' с помощью метода path.resolve().
+//     Оно определяет путь к файлу 'index.tsx' в директории 'src' с помощью метода path.resolve().
 //
 //     Свойство module определяет правила для обработки различных типов файлов.
 //     В данном случае определено одно правило для файлов с расширением '.tsx' или '.ts'.

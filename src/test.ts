@@ -1,3 +1,3 @@
 export function testFunc() {
-    console.log('gg')
+    console.log('gg !!!')
 }

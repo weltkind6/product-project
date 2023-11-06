@@ -4,10 +4,10 @@
     "outDir": "./dist/",
     // Подсвечивает места где не указан тип
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ESNext",
     // В какую версию ES будем компилировать
     "target": "es5",
-    "jsx": "react",
+    "jsx": "react-jsx",
     "allowJs": true,
     "moduleResolution": "node",
     // Можно использовать обычные импорты без *
@@ -19,9 +19,10 @@
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
+      "module": "CommonJS",
     }
-  }
+  },
+//  "baseUrl": "."
 }
 
 
