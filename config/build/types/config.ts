@@ -3,6 +3,7 @@ export interface BuildPaths {
     entry: string;
     html: string;
     build: string;
+    src: string,
 }
 
 export interface BuildEnv {

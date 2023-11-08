@@ -7,7 +7,8 @@ export default (env: BuildEnv) => {
     const paths: BuildPaths = {
         entry: path.resolve(__dirname, 'src', 'index.tsx'),
         build: path.resolve(__dirname, 'build'),
-        html: path.resolve(__dirname, 'public', 'index.html')
+        html: path.resolve(__dirname, 'public', 'index.html'),
+        src: path.resolve(__dirname, 'src'),
     }
 
     const mode = env.mode || "development";
@@ -32,7 +33,7 @@ export default (env: BuildEnv) => {
 //     Свойство mode установлено на "development", что указывает на то, что сборка предназначена для разработки.
 //
 //     Свойство entry указывает точку входа для сборки с помощью webpack.
-//     Оно определяет путь к файлу 'index.tsx' в директории 'src' с помощью метода path.resolve().
+//     Оно определяет путь к файлу 'index.ts' в директории 'src' с помощью метода path.resolve().
 //
 //     Свойство module определяет правила для обработки различных типов файлов.
 //     В данном случае определено одно правило для файлов с расширением '.tsx' или '.ts'.

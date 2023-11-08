@@ -9,6 +9,11 @@
     "target": "es5",
     "jsx": "react-jsx",
     "allowJs": true,
+    // Для абсолютного импорта
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
     "moduleResolution": "node",
     // Можно использовать обычные импорты без *
     // Даже если у пакета нет default import
@@ -22,7 +27,6 @@
       "module": "CommonJS",
     }
   },
-//  "baseUrl": "."
 }
 
 
