@@ -1,9 +1,9 @@
 import React from 'react';
-import {Link} from "react-router-dom";
 import {useTheme} from "app/providers/ThemeProvider";
 import {classNames} from "helpers/classNames/classNames";
-import './styles/index.scss'
 import {AppRouter} from "app/providers/router";
+import {Navbar} from "widgets/Navbar";
+import './styles/index.scss'
 
 const App = () => {
     const {theme, themeToggle} = useTheme();
@@ -13,9 +13,8 @@ const App = () => {
         ('app',
             {},
             [theme])}>
+            <Navbar />
             <button onClick={themeToggle}>Toggle theme</button>
-            <button><Link to={'/'}>Main</Link></button>
-            <button><Link to={'/about'}>About</Link></button>
             <AppRouter />
         </div>
     );
