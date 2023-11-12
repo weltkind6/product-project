@@ -3,6 +3,19 @@ import webpack from "webpack";
 export function buildLoaders(): webpack.RuleSetRule[] {
 
     // Если не на чистом js, то транспилятор не нужен
+    const svgLoader = {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+    }
+
+    const fileLoader = {
+        test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
 
     const cssLoader = {
         test: /\.s[ac]ss$/i,
@@ -25,5 +38,7 @@ export function buildLoaders(): webpack.RuleSetRule[] {
     return [
         tsLoaders,
         cssLoader,
+        svgLoader,
+        fileLoader
     ]
 }
