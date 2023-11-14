@@ -29,6 +29,7 @@ export function buildLoaders(): webpack.RuleSetRule[] {
         ],
     }
 
+    // Если не используем тайпскрипт - нужен babel-loader
     const tsLoaders = {
         test: /\.tsx?$/,
         use: 'ts-loader',
@@ -39,6 +40,6 @@ export function buildLoaders(): webpack.RuleSetRule[] {
         tsLoaders,
         cssLoader,
         svgLoader,
-        fileLoader
+        fileLoader,
     ]
 }

@@ -4,7 +4,7 @@ import {About} from "pages/About";
 
 export enum AppRoutes {
    MAIN = 'main',
-    ABOUT = 'about'
+    ABOUT = 'about',
 }
 
 export const RoutePath: Record<AppRoutes, string> = {
@@ -22,5 +22,5 @@ export const routeConfig: Record<AppRoutes, RouteProps> = {
     [AppRoutes.ABOUT]: {
         path: RoutePath.about,
         element: <About />
-    }
+    },
 }

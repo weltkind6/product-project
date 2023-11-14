@@ -14,3 +14,6 @@ declare module "*.svg" {
 
 declare module "*.png"
 declare module "*.jpg"
+
+// Объявление константы с типом
+declare const PRODUCTION: boolean;
