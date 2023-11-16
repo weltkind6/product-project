@@ -1,22 +1,23 @@
-import webpack from "webpack";
-import HtmlWebpackPlugin from "html-webpack-plugin";
-import {BuildOptions} from "./types/config";
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import webpack from 'webpack'
 
-export function buildPlugins({paths, isDev}: BuildOptions): webpack.WebpackPluginInstance[] {
-    const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin');
+import { type BuildOptions } from './types/config'
 
-    return  [
-        new webpack.ProgressPlugin(),
-        new HtmlWebpackPlugin({ template: paths.html }),
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].[contenthash:8].css',
-            chunkFilename: 'css/[name].[contenthash:8].css'
-        }),
-        new webpack.DefinePlugin({
-            PRODUCTION: JSON.stringify(isDev),
-        }),
-        new webpack.HotModuleReplacementPlugin(),
-        new ReactRefreshWebpackPlugin()
-    ]
+export function buildPlugins ({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+  const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
+  return [
+    new webpack.ProgressPlugin(),
+    new HtmlWebpackPlugin({ template: paths.html }),
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css'
+    }),
+    new webpack.DefinePlugin({
+      PRODUCTION: JSON.stringify(isDev)
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new ReactRefreshWebpackPlugin()
+  ]
 }
