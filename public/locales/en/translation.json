@@ -1,5 +1,8 @@
 {
   "Тестовый пример перевода" : "Test translate example",
-  "Перевод" : "Translate",
-  "Главная" : "Main"
+  "EN" : "RU",
+  "Главная" : "Main",
+  "О сайте" : "About",
+  "Это тестовый перевод для тренировки" : "This is a test translation for training",
+  "Для этого перевода пока что нет ключа": "There is no key for this translation yet"
 }
