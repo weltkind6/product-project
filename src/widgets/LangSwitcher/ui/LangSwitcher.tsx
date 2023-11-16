@@ -5,7 +5,10 @@ import {Button} from "shared/ui/Button/Button";
 import styles from './LangSwitcher.module.scss';
 import {classNames} from "helpers/classNames/classNames";
 
-export const LangSwitcher = () => {
+interface LangSwitcherProps {
+    className?: string
+}
+export const LangSwitcher = ({className}: LangSwitcherProps) => {
     const {t, i18n} = useTranslation();
 
     const translateHandler = async () => {
@@ -15,7 +18,7 @@ export const LangSwitcher = () => {
 
     return (
         <Button
-        className={classNames(styles.LangSwitcher, {}, [])}
+        className={classNames(styles.LangSwitcher, {}, [className])}
             onClick={translateHandler}
         >
             {t('RU')}
