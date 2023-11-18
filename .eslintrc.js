@@ -15,7 +15,10 @@ module.exports = {
       parserOptions: {
         sourceType: 'script'
       },
-      extends: ['plugin:@typescript-eslint/disable-type-checked'],
+      extends: [
+        'plugin:@typescript-eslint/disable-type-checked',
+        'plugin:i18next/recommended'
+      ],
       files: ['./**/*.js']
     }
   ],
@@ -24,7 +27,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: [
-    'react'
+    'react',
+    'i18next'
   ],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'warn',
@@ -38,6 +42,7 @@ module.exports = {
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true }
       }
-    ]
+    ],
+    // 'i18next/no-literal-string': ['error', { markupOnly: true }]
   }
 }
