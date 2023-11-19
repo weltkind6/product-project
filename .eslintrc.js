@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: [
     'standard-with-typescript',
@@ -42,7 +43,7 @@ module.exports = {
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true }
       }
-    ],
+    ]
     // 'i18next/no-literal-string': ['error', { markupOnly: true }]
   }
 }
