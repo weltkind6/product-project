@@ -13,7 +13,9 @@ export default {
     'json',
     'node'
   ],
-  coveragePathIgnorePatterns: [],
+  coveragePathIgnorePatterns: [
+    '\\\\node_modules\\\\'
+  ],
   moduleDirectories: [
     'node_modules'
   ],
