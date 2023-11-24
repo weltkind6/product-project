@@ -4,5 +4,6 @@
   "Главная" : "Main",
   "О сайте" : "About",
   "Это тестовый перевод для тренировки" : "This is a test translation for training",
-  "Для этого перевода пока что нет ключа": "There is no key for this translation yet"
+  "Для этого перевода пока что нет ключа": "There is no key for this translation yet",
+  "Страница не найдена": "Page not found"
 }
