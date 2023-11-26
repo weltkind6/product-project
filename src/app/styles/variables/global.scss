@@ -1,3 +1,9 @@
+// disable react-refresh-overlay-error
+body > iframe {
+  background: tomato;
+  display: none;
+}
+
 :root {
   --font-family-main: consolas, 'Times New Roma', serif;
   --font-size-m: 16px;

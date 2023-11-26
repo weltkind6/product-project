@@ -14,9 +14,9 @@ export const NotFound = ({ className }: NotFoundProps) => {
       <div className={classNames(styles.NotFound, {}, [])}>
           <h2>{t('Страница не найдена')}</h2>
           <img
-              src="https://raw.githubusercontent.com/httpcats/http.cat/master/public/images-original/404.jpg"
-              alt="not found"
-          />
+                  src="https://raw.githubusercontent.com/httpcats/http.cat/master/public/images-original/404.jpg"
+                  alt="not found"
+              />
       </div>
   )
 }

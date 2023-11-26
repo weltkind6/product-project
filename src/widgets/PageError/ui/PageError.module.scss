@@ -1,0 +1,9 @@
+.PageError {
+  display: grid;
+  place-items: center;
+  margin-top: 50px;
+
+  & > h1 {
+    margin-bottom: 20px;
+  }
+}
