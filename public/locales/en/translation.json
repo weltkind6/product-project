@@ -5,5 +5,7 @@
   "О сайте" : "About",
   "Это тестовый перевод для тренировки" : "This is a test translation for training",
   "Для этого перевода пока что нет ключа": "There is no key for this translation yet",
-  "Страница не найдена": "Page not found"
+  "Страница не найдена": "Page not found",
+  "Произошла непредвиденная ошибка!": "An unexpected error has occurred",
+  "Перезагрузить страницу": "Refresh page"
 }
