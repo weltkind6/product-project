@@ -41,9 +41,9 @@ module.exports = {
       {
         groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
         'newlines-between': 'always',
-        alphabetize: { order: 'asc', caseInsensitive: true }
+        alphabetize: { order: 'asc', caseInsensitive: true, code: 100 }
       }
-    ]
-    // 'i18next/no-literal-string': ['error', { markupOnly: true }]
+    ],
+    'max-len': ['error', { ignoreComments: true }]
   }
 }
