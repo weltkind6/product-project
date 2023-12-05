@@ -17,6 +17,9 @@ module.exports = {
         sourceType: 'script'
       },
       extends: [
+        'eslint:recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:import/warnings',
         'plugin:@typescript-eslint/disable-type-checked',
         'plugin:i18next/recommended'
       ],
@@ -29,7 +32,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    'i18next'
+    'i18next',
+    'import'
   ],
   rules: {
     '@typescript-eslint/explicit-function-return-type': 'warn',
@@ -39,7 +43,16 @@ module.exports = {
     'import/order': [
       'error',
       {
-        groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
+        groups: [
+          'index',
+          'sibling',
+          'parent',
+          'internal',
+          'external',
+          'builtin',
+          'object',
+          'type'
+        ],
         'newlines-between': 'always',
         alphabetize: { order: 'asc', caseInsensitive: true, code: 100 }
       }
