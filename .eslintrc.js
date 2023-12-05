@@ -53,8 +53,8 @@ module.exports = {
           'object',
           'type'
         ],
-        'newlines-between': 'always',
-        alphabetize: { order: 'asc', caseInsensitive: true, code: 100 }
+        'newlines-between': 'always'
+        // alphabetize: { order: 'asc', caseInsensitive: true, code: 100 }
       }
     ],
     'max-len': ['error', { ignoreComments: true }]
