@@ -20,15 +20,17 @@ export default {
     'node_modules'
   ],
   testMatch: [
-    // '**/__tests__/**/*.[jt]s?(x)',
-    // '**/?(*.)+(spec|test).[tj]s?(x)'
     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
   ],
   testEnvironment: 'jsdom',
   rootDir: '../../',
   modulePaths: [
     '<rootDir>src'
-  ]
+  ],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+  },
+  // setupFilesAfterEnv: ['<rootDir>./config/jest/setupTests.ts'],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
