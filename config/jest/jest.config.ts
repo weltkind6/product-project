@@ -28,7 +28,7 @@ export default {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
     },
-    //setupFilesAfterEnv: ['<rootDir>./config/jest/setupTests.ts'],
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
