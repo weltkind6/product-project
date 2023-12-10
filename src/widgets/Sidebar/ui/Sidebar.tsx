@@ -7,12 +7,14 @@ interface SidebarProps {
 
 }
 export const Sidebar = ({ className }: SidebarProps) => {
-  const [isCollapsed, setIsCollapsed] = useState(false)
-  const onToggleHandler = () => { setIsCollapsed(prev => !prev) }
+    const [isCollapsed, setIsCollapsed] = useState(false)
+    const onToggleHandler = () => { setIsCollapsed(prev => !prev) }
 
-  return (
-        <div className={classNames(styles.Sidebar, { [styles.isCollapsed]: isCollapsed }, [className])}>
+    return (
+        <div className={classNames(styles.Sidebar,
+            { [styles.isCollapsed]: isCollapsed }, [className])} data-testid="sidebar"
+        >
             <button onClick={onToggleHandler}>Toggle</button>
         </div>
-  )
+    )
 }
