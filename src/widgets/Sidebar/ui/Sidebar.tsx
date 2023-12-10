@@ -14,7 +14,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
         <div className={classNames(styles.Sidebar,
             { [styles.isCollapsed]: isCollapsed }, [className])} data-testid="sidebar"
         >
-            <button onClick={onToggleHandler}>Toggle</button>
+            <button onClick={onToggleHandler} data-testid="sidebar-toggle">
+                Toggle
+            </button>
         </div>
     )
 }
