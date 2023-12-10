@@ -1,13 +1,15 @@
 import {render, screen} from "@testing-library/react";
 import {Navbar} from "widgets/Navbar";
 import { BrowserRouter as Router } from 'react-router-dom';
+import {renderWithTranslation} from "lib/tests/renderWithTranslation/renderWithTranslation";
 
 describe('navbar test', () => {
     test('search by text', () => {
-        render(
+        renderWithTranslation(
             <Router>
                 <Navbar />
-            </Router>)
+            </Router>
+        )
         expect(screen.getByTestId('navbar')).toBeInTheDocument()
     })
 })

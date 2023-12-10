@@ -18,7 +18,7 @@ export const LangSwitcher = ({className}: LangSwitcherProps) => {
 
     return (
         <Button
-        className={classNames(styles.LangSwitcher, {}, [className])}
+            className={classNames(styles.LangSwitcher, {}, [className])}
             onClick={translateHandler}
         >
             {t('RU')}
