@@ -10,25 +10,25 @@ interface NavbarProps {
 
 }
 export const Navbar = ({ className }: NavbarProps) => {
-  return (
-      <div className={classNames(styles.Navbar, {}, [])}>
-          <div className={classNames(styles.switcherBlock, {}, [])}>
-              <ThemeSwitcher />
-              <LangSwitcher className={styles.lang}/>
-          </div>
-          <div className={styles.links}>
-              <AppLink
+    return (
+        <div className={classNames(styles.Navbar, {}, [])} data-testid="navbar">
+            <div className={classNames(styles.switcherBlock, {}, [])}>
+                <ThemeSwitcher />
+                <LangSwitcher className={styles.lang}/>
+            </div>
+            <div className={styles.links}>
+                <AppLink
                     theme={AppLinkTheme.PRIMARY}
                     to={'/'}
                     className={styles.mainLink}>
-                  Main
-              </AppLink>
-              <AppLink
+                    Main
+                </AppLink>
+                <AppLink
                     to={'/about'}
                     theme={AppLinkTheme.PRIMARY}
                 >About
-              </AppLink>
-          </div>
-      </div>
-  )
+                </AppLink>
+            </div>
+        </div>
+    )
 }
