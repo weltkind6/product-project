@@ -1,6 +1,7 @@
 import { classNames } from 'helpers/classNames/classNames'
 import styles from './Sidebar.module.scss'
 import { useState } from 'react'
+import i18next from "i18next";
 
 interface SidebarProps {
   className?: string
@@ -15,7 +16,7 @@ export const Sidebar = ({ className }: SidebarProps) => {
             { [styles.isCollapsed]: isCollapsed }, [className])} data-testid="sidebar"
         >
             <button onClick={onToggleHandler} data-testid="sidebar-toggle">
-                Toggle
+                {i18next.t('Toggle')}
             </button>
         </div>
     )
