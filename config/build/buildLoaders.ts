@@ -1,4 +1,5 @@
-import type webpack from 'webpack'
+import * as webpack from 'webpack'
+import {buildCssLoader} from "./loaders/buildCssLoader";
 
 export function buildLoaders (): webpack.RuleSetRule[] {
     // Если не на чистом js, то транспилятор не нужен
@@ -16,17 +17,7 @@ export function buildLoaders (): webpack.RuleSetRule[] {
         ]
     }
 
-    const cssLoader = {
-        test: /\.s[ac]ss$/i,
-        use: [
-            // Creates `style` nodes from JS strings
-            'style-loader',
-            // Translates CSS into CommonJS
-            'css-loader',
-            // Compiles Sass to CSS
-            'sass-loader'
-        ]
-    }
+    const cssLoader = buildCssLoader()
 
     // Если не используем тайпскрипт - нужен babel-loader
     const tsLoaders = {

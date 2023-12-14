@@ -1,4 +1,4 @@
-import type webpack from 'webpack'
+import * as webpack from 'webpack'
 
 import { buildDevServer } from './buildDevServer'
 import { buildLoaders } from './buildLoaders'

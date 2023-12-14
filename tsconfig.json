@@ -18,9 +18,9 @@
     // Можно использовать обычные импорты без *
     // Даже если у пакета нет default import
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
     // Позволяет работать с пакетами как с обычными (import)
     // common js => import/export
-    "esModuleInterop": true
   },
   "ts-node": {
     "compilerOptions": {
@@ -28,7 +28,8 @@
     }
   },
   "include": [
-    "src/**/*" ,
+    "src/**/*.ts" ,
+    "src/**/*.tsx" ,
     "./config/jest/setupTests.ts"
   ]
 }

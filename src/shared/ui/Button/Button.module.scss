@@ -9,3 +9,16 @@
     margin: 0;
     background: none;
 }
+
+.primary {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+}
+
+.outlined {
+    padding: 5px 10px;
+    border: 2px solid #000;
+    color: var(--secondary-color);
+}
+

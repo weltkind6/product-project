@@ -1,8 +1,7 @@
-import type webpack from 'webpack'
-
+import { ResolveOptions } from 'webpack';
 import { type BuildOptions } from './types/config'
 
-export function buildResolves (options: BuildOptions): webpack.ResolveOptions {
+export function buildResolves (options: BuildOptions): ResolveOptions {
     return {
         extensions: ['.tsx', '.ts', '.js'],
         preferAbsolute: true,
