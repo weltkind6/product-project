@@ -20,6 +20,10 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
             path: paths.build,
             clean: true
         },
+        performance: {
+            maxEntrypointSize: 500000,
+            maxAssetSize: 300000
+        },
         devtool: isDev ? 'inline-source-map' : undefined,
         devServer: isDev ? buildDevServer(options) : undefined,
         resolve: buildResolves(options),
