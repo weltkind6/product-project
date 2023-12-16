@@ -1,8 +1,5 @@
 import {useTranslation} from "react-i18next";
 import {Button} from "shared/ui/Button/Button";
-import {classNames} from "helpers/classNames/classNames";
-
-import styles from './LangSwitcher.module.scss';
 
 interface LangSwitcherProps {
     className?: string
@@ -17,7 +14,6 @@ export const LangSwitcher = ({className}: LangSwitcherProps) => {
 
     return (
         <Button
-            className={classNames(styles.LangSwitcher, {}, [className])}
             onClick={translateHandler}
         >
             {t('RU')}
