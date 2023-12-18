@@ -1,7 +1,7 @@
 import * as webpack from 'webpack'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
-import * as HtmlWebpackPlugin from 'html-webpack-plugin'
-import * as MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 import { type BuildOptions } from './types/config'
 
