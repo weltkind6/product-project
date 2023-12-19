@@ -41,20 +41,20 @@ export const Outlined: Story = {
 export const Small: Story = {
     args: {
         children: '>',
-        btnSize: ButtonSize.SMALL
+        size: ButtonSize.SMALL
     }
 }
 
 export const Medium: Story = {
     args: {
         children: '>',
-        btnSize: ButtonSize.MEDIUM
+        size: ButtonSize.MEDIUM
     }
 }
 
 export const Large: Story = {
     args: {
         children: '>',
-        btnSize: ButtonSize.LARGE
+        size: ButtonSize.LARGE
     }
 }
