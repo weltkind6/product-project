@@ -12,13 +12,13 @@ export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     const { theme, themeToggle } = useTheme()
 
     return (
-        <>
+        <div style={{marginRight: "30px"}}>
             <Button
                 theme={ThemeButton.CLEAR}
                 onClick={themeToggle}
             >
                 {theme === 'light' ? <Sun /> : <Moon />}
             </Button>
-        </>
+        </div>
     )
 }

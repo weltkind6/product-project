@@ -1,5 +1,8 @@
 .Button {
     cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
 }
 
 .clear {
@@ -18,7 +21,30 @@
 
 .outlined {
     padding: 5px 10px;
-    border: 2px solid #000;
+    border: 2px solid var(--primary-color);
     color: var(--secondary-color);
 }
 
+.background {
+    background: var(--bg-color);
+}
+
+.backgroundInverted {
+    background: var(--inverterd-bg-color);
+}
+
+.square {
+    border: none;
+}
+
+.size_s {
+   padding: 10px;
+}
+
+.size_m {
+    padding: 13px;
+}
+
+.size_l {
+    padding: 16px;
+}

@@ -3,9 +3,44 @@
   height: calc(100vh - var(--navbar-height));
   background: lightgreen;
   position: relative;
-  transition: ease-in-out .3s;
+  transition: ease-in-out .4s;
 }
 
 .isCollapsed {
   width: var(--sidebar-width-collapsed);
+
+  .link {
+    width: 0;
+    opacity: 0;
+    transition: ease-in-out .3s;
+  }
+
+  .linkWrapper {
+    display: flex;
+    align-items: center;
+
+    & > span {
+      width: 0;
+      opacity: 0;
+      transition: ease-in-out .3s;
+    }
+  }
 }
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0 0 30px;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+.toggleBtn {
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+}
+
+

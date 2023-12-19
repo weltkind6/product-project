@@ -1,5 +1,5 @@
 import {useTranslation} from "react-i18next";
-import {Button} from "shared/ui/Button/Button";
+import {Button, ButtonSize} from "shared/ui/Button/Button";
 
 interface LangSwitcherProps {
     className?: string
@@ -14,6 +14,7 @@ export const LangSwitcher = ({className}: LangSwitcherProps) => {
 
     return (
         <Button
+            size={ButtonSize.SMALL}
             onClick={translateHandler}
         >
             {t('RU')}

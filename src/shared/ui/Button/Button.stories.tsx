@@ -1,5 +1,5 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {Button, ThemeButton} from "shared/ui/Button/Button";
+import {Button, ButtonSize, ThemeButton} from "shared/ui/Button/Button";
 
 const meta = {
     title: 'shared/Button',
@@ -37,3 +37,24 @@ export const Outlined: Story = {
         theme: ThemeButton.OUTLINED,
     },
 };
+
+export const Small: Story = {
+    args: {
+        children: '>',
+        btnSize: ButtonSize.SMALL
+    }
+}
+
+export const Medium: Story = {
+    args: {
+        children: '>',
+        btnSize: ButtonSize.MEDIUM
+    }
+}
+
+export const Large: Story = {
+    args: {
+        children: '>',
+        btnSize: ButtonSize.LARGE
+    }
+}
