@@ -1,5 +1,5 @@
 import {classNames} from "helpers/classNames/classNames";
-import React, {ReactNode, useRef, useState} from "react";
+import React, {ReactNode, useCallback, useEffect, useRef, useState} from "react";
 import styles from './Modal.module.scss';
 
 interface ModalProps {
@@ -10,11 +10,11 @@ interface ModalProps {
 }
 
 export const Modal = (props: ModalProps) => {
-    const {children, className, isOpen, onClose} = props
+    const {children, isOpen, onClose} = props
     const [isClosing, setIsClosing]  = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
-    const closeHandler = () => {
+    const closeHandler = useCallback(() => {
         if(onClose) {
             setIsClosing(true);
             timerRef.current = setTimeout(() =>  {
@@ -22,8 +22,23 @@ export const Modal = (props: ModalProps) => {
                 setIsClosing(false);
             }, 300)
         }
-    }
+    }, [onClose])
+
     const onContentClick = (e: React.MouseEvent) => e.stopPropagation()
+
+    const onKeyDown = useCallback((e: KeyboardEvent) => {
+        if(e.key === 'Escape') {
+            closeHandler()
+        }
+    }, [closeHandler])
+
+    useEffect(() => {
+        if(isOpen) {
+            window.addEventListener('keydown', onKeyDown)
+        }
+
+        return () => clearTimeout(timerRef.current)
+    }, [isOpen, onKeyDown])
 
     const mods: Record<string, boolean> = {
         [styles.opened]:  isOpen,

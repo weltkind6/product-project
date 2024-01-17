@@ -8,9 +8,9 @@ interface LoaderProps {
 
 }
 export const Loader = ({ className }: LoaderProps) => {
-  return (
-      <div className={classNames(styles.Loader, {}, [])}>
-          <Preloader />
-      </div>
-  )
+    return (
+        <div className={classNames(styles.Loader, {}, [])}>
+            <Preloader />
+        </div>
+    )
 }
