@@ -15,13 +15,19 @@ export const Modal = (props: ModalProps) => {
     const timerRef = useRef<ReturnType<typeof setTimeout>>()
 
     const closeHandler = () => {
-        onClose && onClose();
-        timerRef.current = setTimeout(() => onClose(), 300)
+        if(onClose) {
+            setIsClosing(true);
+            timerRef.current = setTimeout(() =>  {
+                onClose();
+                setIsClosing(false);
+            }, 300)
+        }
     }
     const onContentClick = (e: React.MouseEvent) => e.stopPropagation()
 
     const mods: Record<string, boolean> = {
         [styles.opened]:  isOpen,
+        [styles.isClosing]: isClosing,
     }
 
     return (
