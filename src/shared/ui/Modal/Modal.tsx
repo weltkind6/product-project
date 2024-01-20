@@ -1,5 +1,6 @@
 import {classNames} from "helpers/classNames/classNames";
 import React, {ReactNode, useCallback, useEffect, useRef, useState} from "react";
+import {Portal} from "shared/ui/Portal/Portal";
 import styles from './Modal.module.scss';
 
 interface ModalProps {
@@ -45,13 +46,18 @@ export const Modal = (props: ModalProps) => {
         [styles.isClosing]: isClosing,
     }
 
+    const modalRoot = document.getElementById("modal-root");
+
+
     return (
-        <div className={classNames(styles.Modal, mods, [])}>
-            <div className={styles.overlay} onClick={closeHandler}>
-                <div className={styles.content} onClick={onContentClick}>
-                    {children}
+        <Portal>
+            <div className={classNames(styles.Modal, mods, [])}>
+                <div className={styles.overlay} onClick={closeHandler}>
+                    <div className={styles.content} onClick={onContentClick}>
+                        {children}
+                    </div>
                 </div>
             </div>
-        </div>
+        </Portal>
     );
 };

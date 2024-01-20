@@ -5,6 +5,7 @@ import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
 import About from 'shared/assets/icons/about.svg'
 import Main from 'shared/assets/icons/main.svg'
 import styles from './Sidebar.module.scss'
+import {useTranslation} from "react-i18next";
 
 interface SidebarProps {
     className?: string
@@ -12,6 +13,7 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
+    const { t } = useTranslation();
     const [isCollapsed, setIsCollapsed] = useState(false)
     const onToggleHandler = () => {
         setIsCollapsed(prev => !prev)
@@ -38,7 +40,7 @@ export const Sidebar = ({className}: SidebarProps) => {
                     to={'/'}
                 >
                     <Main className={styles.icon}/>
-                    <span>Main</span>
+                    <span>{t('Главная')}</span>
                 </AppLink>
                 <AppLink
                     className={styles.linkWrapper}
@@ -46,7 +48,7 @@ export const Sidebar = ({className}: SidebarProps) => {
                     theme={AppLinkTheme.PRIMARY}
                 >
                     <About className={styles.icon}/>
-                    <span>Home</span>
+                    <span>{t('Домой')}</span>
                 </AppLink>
             </div>
         </div>
