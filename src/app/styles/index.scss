@@ -5,12 +5,15 @@
 
 body {
    font: var(--font-m);
-   background: var(--bg-color);
    color: var(--primary-color);
 }
 
 .app {
-   min-height: 100vh;
+   max-height: 100vh;
+   padding: 15px;
+   display: grid;
+   grid-gap: 10px;
+   background: var(--bg-color);
 }
 
 .content-page {

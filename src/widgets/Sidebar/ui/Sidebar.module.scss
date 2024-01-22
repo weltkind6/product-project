@@ -1,9 +1,10 @@
 .Sidebar {
   width: var(--sidebar-width);
-  height: calc(100vh - var(--navbar-height));
-  background: lightgreen;
+  height: 88vh;
+  background: var(--inverterd-bg-color);
   position: relative;
   transition: ease-in-out .4s;
+  border-radius: var(--br-1);
 }
 
 .isCollapsed {
