@@ -15,3 +15,5 @@ declare module '*.jpg'
 
 // Объявление константы с типом
 declare const PRODUCTION: boolean
+
+declare module 'react-dom/client';
