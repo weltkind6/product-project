@@ -1,12 +1,11 @@
-import {useTranslation} from "react-i18next";
 import React from "react";
+import {translator} from "helpers/translator/translator";
 
 const About = () => {
-    const { t } = useTranslation();
 
     return (
         <div>
-            <h2>{JSON.stringify(t('О сайте'))}</h2>
+            <h2>{translator('О сайте')}</h2>
         </div>
     );
 };

@@ -1,14 +1,10 @@
-import { useTranslation } from 'react-i18next'
 import {Counter} from "app/entities/Counter";
+import {translator} from "helpers/translator/translator";
 
 const Main = () => {
-    const { t } = useTranslation()
-
     return (
         <div>
-            <h2>{JSON.stringify(t('Главная'))}</h2>
-            <div>{JSON.stringify(t('Это тестовый перевод для тренировки'))}</div>
-            <div>{JSON.stringify(t('Для этого перевода пока что нет ключа'))}</div>
+            <h2>{translator('Главная')}</h2>
             <Counter />
         </div>
     )
