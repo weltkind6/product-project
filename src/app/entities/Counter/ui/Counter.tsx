@@ -1,12 +1,10 @@
 import {Button} from "shared/ui/Button/Button";
 import {useDispatch, useSelector} from "react-redux";
 import {decrement, increment} from "app/entities/Counter/model/slice/CounterSlice";
+import {StateSchema} from "app/providers/StoreProvider/config/StateSchema";
 export const Counter = () => {
-    console.log('counterValue')
-
     const dispatch = useDispatch();
-    const value = useSelector(state => state.counter.value)
-    console.log('value', value)
+    const value = useSelector((state: StateSchema) => state.counter.value)
 
     const incrementHandler  = () => {
         dispatch(increment())
