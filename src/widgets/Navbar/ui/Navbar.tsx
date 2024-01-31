@@ -7,9 +7,10 @@ import {Modal} from "shared/ui/Modal/Modal";
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 import {useCallback, useState} from "react";
 import {useTranslation} from "react-i18next";
+import {translator} from "helpers/translator/translator";
 
 export const Navbar = () => {
-    const { t } = useTranslation();
+    const {} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
     const onToggleModal = useCallback(() => {
@@ -34,7 +35,7 @@ export const Navbar = () => {
                     theme={ThemeButton.BACKGROUND_INVERTED}
                     onClick={onToggleModal}
                 >
-                    {t('Войти')}
+                    {translator('Войти')}
                 </Button>
             </div>
         </div>

@@ -6,6 +6,7 @@ import About from 'shared/assets/icons/about.svg'
 import Main from 'shared/assets/icons/main.svg'
 import styles from './Sidebar.module.scss'
 import {useTranslation} from "react-i18next";
+import {translator} from "helpers/translator/translator";
 
 interface SidebarProps {
     className?: string
@@ -13,10 +14,10 @@ interface SidebarProps {
 }
 
 export const Sidebar = ({className}: SidebarProps) => {
-    const { t } = useTranslation();
-    const [isCollapsed, setIsCollapsed] = useState(false)
+    const {} = useTranslation();
+    const [isCollapsed, setIsCollapsed] = useState(false);
     const onToggleHandler = () => {
-        setIsCollapsed(prev => !prev)
+        setIsCollapsed(prev => !prev);
     }
 
     return (
@@ -40,7 +41,7 @@ export const Sidebar = ({className}: SidebarProps) => {
                     to={'/'}
                 >
                     <Main className={styles.icon}/>
-                    <span>{t('Главная')}</span>
+                    <span>{translator('Главная')}</span>
                 </AppLink>
                 <AppLink
                     className={styles.linkWrapper}
@@ -48,7 +49,7 @@ export const Sidebar = ({className}: SidebarProps) => {
                     theme={AppLinkTheme.PRIMARY}
                 >
                     <About className={styles.icon}/>
-                    <span>{t('Домой')}</span>
+                    <span>{translator('Домой')}</span>
                 </AppLink>
             </div>
         </div>
