@@ -6,7 +6,7 @@ const About = () => {
 
     return (
         <div>
-            <h2>{t('О сайте')}</h2>
+            <h2>{JSON.stringify(t('О сайте'))}</h2>
         </div>
     );
 };
