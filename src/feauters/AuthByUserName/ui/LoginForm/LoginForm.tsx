@@ -4,22 +4,17 @@ import styles from './LoginForm.module.scss';
 import {Button} from "shared/ui/Button/Button";
 import {translator} from "helpers/translator/translator";
 import {Input} from "shared/ui/Input/ui/Input";
-
-interface LoginFormProps {
-    className?: string;
-
-}
-export const LoginForm = ({className}: LoginFormProps) => {
+export const LoginForm = () => {
     const {}  = useTranslation();
 
     return (
         <div className={classNames(styles.LoginForm, {}, [])}>
             <Input
-                placeHolder="Имя"
+                placeHolder={translator('Имя')}
                 autoFocus={true}
             />
             <Input
-                placeHolder="Пароль"
+                placeHolder={translator('Пароль')}
                 autoFocus={false}
             />
             <Button className={styles.loginBtn}>

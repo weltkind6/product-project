@@ -9,5 +9,7 @@
   "Произошла непредвиденная ошибка!": "An unexpected error has occurred",
   "Перезагрузить страницу": "Refresh page",
   "Войти":"Log in",
-  "Домой":"Home"
+  "Домой":"Home",
+  "Имя":"First name",
+  "Пароль":"password"
 }

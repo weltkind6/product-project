@@ -22,7 +22,6 @@ export const Input = memo((props: InputProps) => {
         autoFocus,
         ...rest
     } = props;
-    console.log('autoFocus', autoFocus);
 
     const {}  = useTranslation();
     const inputRef = useRef<HTMLInputElement>(null);
