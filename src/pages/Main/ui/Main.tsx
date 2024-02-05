@@ -3,7 +3,7 @@ import {Counter} from "app/entities/Counter";
 import {translator} from "helpers/translator/translator";
 
 const Main = () => {
-    const {} = useTranslation()
+    const {} = useTranslation();
 
     return (
         <div>

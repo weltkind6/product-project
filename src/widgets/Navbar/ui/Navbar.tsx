@@ -8,24 +8,22 @@ import {Button, ThemeButton} from "shared/ui/Button/Button";
 import {useCallback, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {translator} from "helpers/translator/translator";
+import {LoginModal} from "feauters/AuthByUserName";
 
 export const Navbar = () => {
     const {} = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
 
-    const onToggleModal = useCallback(() => {
+    const onCloseModal = useCallback(() => {
         setIsOpen(prev => !prev);
     }, [])
 
     return (
         <div className={classNames(styles.Navbar, {}, [])} data-testid="navbar">
-            <Modal isOpen={isOpen} onClose={onToggleModal}>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam asperiores aut autem dolore
-                dolores esse exercitationem laboriosam minus odio quaerat qui quidem, tempore!
-                Fugiat molestiae nisi
-                tempore, totam ullam vel?
-            </Modal>
+            <LoginModal
+                isOpen={isOpen}
+                onCLose={onCloseModal}
+            />
             <div className={styles.panel}>
                 <div className={styles.switcherBlock}>
                     <ThemeSwitcher />
@@ -33,7 +31,7 @@ export const Navbar = () => {
                 </div>
                 <Button
                     theme={ThemeButton.BACKGROUND_INVERTED}
-                    onClick={onToggleModal}
+                    onClick={onCloseModal}
                 >
                     {translator('Войти')}
                 </Button>
