@@ -16,10 +16,11 @@ export const LoginForm = ({className}: LoginFormProps) => {
         <div className={classNames(styles.LoginForm, {}, [])}>
             <Input
                 placeHolder="Имя"
-                autoFocus
+                autoFocus={true}
             />
             <Input
                 placeHolder="Пароль"
+                autoFocus={false}
             />
             <Button className={styles.loginBtn}>
                 {translator('Войти')}

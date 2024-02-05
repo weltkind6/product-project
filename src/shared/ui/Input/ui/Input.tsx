@@ -9,12 +9,29 @@ interface InputProps extends HtmlInputProps{
     className?: string;
     value?: string;
     onChange?: (value: string) => void;
+    autoFocus?: boolean;
 
 }
 
 export const Input = memo((props: InputProps) => {
+    const {
+        value,
+        onChange,
+        type = 'text',
+        placeHolder,
+        autoFocus,
+        ...rest
+    } = props;
+    console.log('autoFocus', autoFocus);
+
     const {}  = useTranslation();
-    const {value, onChange, type = 'text', placeHolder, autoFocus, ...rest} = props;
+    const inputRef = useRef<HTMLInputElement>(null);
+
+    useEffect(() => {
+        if(autoFocus) {
+            inputRef.current?.focus();
+        }
+    }, [autoFocus]);
 
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
         onChange?.(e.target.value);
@@ -22,6 +39,7 @@ export const Input = memo((props: InputProps) => {
 
     return (
         <input
+            ref={inputRef}
             className={classNames(styles.Input, {}, [])}
             type={type}
             value={value}

@@ -17,8 +17,10 @@ export const Modal = (props: ModalProps) => {
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
 
     useEffect(() => {
-        setIsMounted(true);
-    }, [isOpen])
+        if(isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
 
 
     const closeHandler = useCallback(() => {
