@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+
 import {UserSchema} from "../types/user";
 
 const initialState: UserSchema = {}

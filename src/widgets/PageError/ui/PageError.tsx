@@ -1,8 +1,8 @@
 import { classNames } from 'helpers/classNames/classNames'
+import {translator} from "helpers/translator/translator";
 import { Button } from 'shared/ui/Button/Button'
 
 import styles from './PageError.module.scss'
-import {translator} from "helpers/translator/translator";
 
 export const PageError = () => {
     const reloadPageHandler = () => {

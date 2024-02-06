@@ -1,14 +1,13 @@
+import {LoginModal} from "feauters/AuthByUserName";
 import {classNames} from 'helpers/classNames/classNames'
-import {ThemeSwitcher} from 'shared/ui/ThemeSwitcher'
-import {LangSwitcher} from 'shared/ui/LangSwitcher'
-
-import styles from './Navbar.module.scss'
-import {Modal} from "shared/ui/Modal/Modal";
-import {Button, ThemeButton} from "shared/ui/Button/Button";
+import {translator} from "helpers/translator/translator";
 import {useCallback, useState} from "react";
 import {useTranslation} from "react-i18next";
-import {translator} from "helpers/translator/translator";
-import {LoginModal} from "feauters/AuthByUserName";
+import {Button, ThemeButton} from "shared/ui/Button/Button";
+import {LangSwitcher} from 'shared/ui/LangSwitcher'
+import {ThemeSwitcher} from 'shared/ui/ThemeSwitcher'
+
+import styles from './Navbar.module.scss'
 
 export const Navbar = () => {
     const {} = useTranslation();

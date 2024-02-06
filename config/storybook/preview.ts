@@ -1,4 +1,5 @@
 import {Preview} from "@storybook/react";
+
 import {ThemeDecorator} from "../../src/shared/config/storybook/ThemeDecorator";
 
 const preview: Preview = {

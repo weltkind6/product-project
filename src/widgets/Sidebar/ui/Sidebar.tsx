@@ -1,12 +1,13 @@
 import {classNames} from 'helpers/classNames/classNames'
+import {translator} from "helpers/translator/translator";
 import {useState} from 'react'
-import {Button, ButtonSize, ThemeButton} from "shared/ui/Button/Button";
-import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
+import {useTranslation} from "react-i18next";
 import About from 'shared/assets/icons/about.svg'
 import Main from 'shared/assets/icons/main.svg'
+import {AppLink, AppLinkTheme} from "shared/ui/AppLink/AppLink";
+import {Button, ButtonSize, ThemeButton} from "shared/ui/Button/Button";
+
 import styles from './Sidebar.module.scss'
-import {useTranslation} from "react-i18next";
-import {translator} from "helpers/translator/translator";
 
 interface SidebarProps {
     className?: string

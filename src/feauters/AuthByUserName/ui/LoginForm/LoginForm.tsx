@@ -1,9 +1,10 @@
 import {classNames} from "helpers/classNames/classNames";
-import {useTranslation} from "react-i18next";
-import styles from './LoginForm.module.scss';
-import {Button} from "shared/ui/Button/Button";
 import {translator} from "helpers/translator/translator";
+import {useTranslation} from "react-i18next";
+import {Button} from "shared/ui/Button/Button";
 import {Input} from "shared/ui/Input/ui/Input";
+
+import styles from './LoginForm.module.scss';
 export const LoginForm = () => {
     const {}  = useTranslation();
 

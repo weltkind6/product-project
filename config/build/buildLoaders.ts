@@ -1,4 +1,5 @@
 import * as webpack from 'webpack'
+
 import {buildCssLoader} from "./loaders/buildCssLoader";
 
 export function buildLoaders (): webpack.RuleSetRule[] {
