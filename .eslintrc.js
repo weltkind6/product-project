@@ -51,7 +51,8 @@ module.exports = {
         ],
         'max-len': ['error', { ignoreComments: true, code: 100 }],
         "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-        "react-hooks/exhaustive-deps": "warn" // Checks effect useCallback
+        "react-hooks/exhaustive-deps": "warn", // Checks effect useCallback
+        'no-console': ['error', { allow: ['warn'] }],
     },
     overrides: [
         {
