@@ -14,7 +14,7 @@ i18n
     // default lang
         fallbackLng: 'en',
         // console errors
-        debug: PRODUCTION,
+        debug: false,
 
         interpolation: {
             escapeValue: false // not needed for react as it escapes by default

@@ -5,20 +5,20 @@ interface PreloaderProps {
 
 }
 export const Preloader = ({ className }: PreloaderProps) => {
-  return (
-      <div className={styles.ldsDefault}>
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-          <div />
-      </div>
-  )
+    return (
+        <div className={styles.ldsDefault}>
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+            <div />
+        </div>
+    )
 }

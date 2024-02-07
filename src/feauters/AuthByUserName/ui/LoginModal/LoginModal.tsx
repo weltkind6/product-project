@@ -1,6 +1,6 @@
+import {LoginForm} from "feauters/AuthByUserName/ui/LoginForm/LoginForm";
 import {classNames} from "helpers/classNames/classNames";
 import {Modal} from "shared/ui/Modal/Modal";
-import {LoginForm} from "feauters/AuthByUserName/ui/LoginForm/LoginForm";
 
 interface LoginModalProps {
     className?: string;
